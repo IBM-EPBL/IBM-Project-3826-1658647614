@@ -1,7 +1,7 @@
 
 
-### ☑️ Requirement Analysis
-### ✅ Customer Journey
-### ✅ Data Flow Diagrams
-### ☑️ Technology Architecture
+### ☑️ Requirement Analysis - Thowfeekahamadu M
+### ✅ Customer Journey - Divya D
+### ✅ Data Flow Diagrams - Bhuvaneswari T
+### ☑️ Technology Architecture - Dharun kanna N
 
