@@ -2,6 +2,6 @@
 
 ### ☑️ Requirement Analysis
 ### ✅ Customer Journey
-### ☑️ Data Flow Diagrams
+### ✅ Data Flow Diagrams
 ### ☑️ Technology Architecture
 
