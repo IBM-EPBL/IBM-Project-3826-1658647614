@@ -1,5 +1,6 @@
 # Sprint - 2 : UI Development
 ## Tasks 
+### Technologies Used : HTML , TailwindCSS
 
 ### ✅ Home Page design 
 ![1](https://user-images.githubusercontent.com/72749120/201459693-a217a973-110d-43a6-8b68-0c604e8e343e.png)
