@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Liver Disease Predictor</title>
+</head>
+<body class="h-full w-full">
+    <div class="p-5 bg-teal-700 sticky top-0">
+        <nav class="flex content-center">
+            <ul class="basis-3/4 content-center flex gap-6">
+                <img class="w-14" src="{{url_for('static',filename='images/liver-logo-1.png')}}" alt="Logo" />
+                <h1 class="text-2xl mt-2 font-semibold text-teal-100">Liver-AI</h1>
+            </ul>
+           <ul class="basis-1/4 flex gap-8 mt-2">
+             <li><button class="bg-teal-100 px-6 py-2 rounded-lg"><a href="#">Home</a></button></li>
+             <li><button class="bg-teal-100 px-6 py-2 rounded-lg"><a href="#predict">Predict</a></button></li>
+           </ul>
+        </nav>
+    </div>
+
+    <div class="bg-teal-50 flex gap-7 px-12 py-16">
+            <section class="basis-1/2 px-8 py-12 text-slate-800  text-2xl font-sans border-4 border-teal-700 rounded-3xl hover:bg-teal-700 hover:text-teal-50">
+                Liver diseases avert the normal function of the liver. Mainly due to the large amount of alcohol consumption liver disease arises. Early prediction of liver disease using classification algorithms is an efficacious task that can help the doctors to diagnose the disease within a short duration of time. Discovering the existence of liver disease at an early stage is a complex task for the doctors. The main objective of this project is to analyze the parameters of various classification algorithms and compare their predictive accuracies so as to find out the best classifier for determining the liver disease.
+            </section>
+            <img class="w-3/4 basis-1/2 rounded-3xl" src="{{url_for('static',filename='images/liver-banner.png')}}" alt="doctor">
+            
+
+        <!-- <button id="#predict" class="absolute bottom-4  left-1/2 bg-red-300 p-3 rounded-lg text-2xl ">Check Your Liver Health</button> -->
+    </div>
+
+    <div class="bg-teal-100 p-5" id="predict">
+        <h3 class="text-center px-12 mb-12 mt-10 font-semibold text-3xl">Check your Liver Health</h3>
+        
+        <form class="grid grid-cols-2 gap-8 px-10" action="/predict" method="POST">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="age"  placeholder="Age">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="gender"  placeholder="Gender(Male: 1, Female: 0)">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="tb"  placeholder="Total Bilirubin">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="db"  placeholder="Direct Bilirubin">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="ap"  placeholder="Alkaline Phosphotase">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="aa1"  placeholder="Alamine Aminotransferase">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="aa2"  placeholder="Aspartate Aminotransferase">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="tp"  placeholder="Total Protiens">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="al"  placeholder="Albumin">
+            <input class="text-2xl px-4 py-2 rounded-lg focus:border-2 focus:border-teal-700 outline-none" type="text" name="agr"  placeholder="Albumin and Globulin Ratio">
+            
+        
+            <input class="bg-red-400 px-6 py-3 col-span-2 rounded-2xl text-2xl hover:cursor-pointer hover:bg-red-500" type="submit" value="Predict">
+        </form>
+        
+        
+
+
+        
+
+    </div>
+    
+    
+</body>
+</html>
+
+
+
+<!--  This Project examines data from liver patients concentrating on relationships between a key list of liver enzymes, proteins, age and gender using them to try and predict the likeliness of liver disease. Here we are building a model by applying various machine learning algorithms find the best accurate model. And integrate to flask based web application. User can predict the disease by entering parameters in the web application. -->

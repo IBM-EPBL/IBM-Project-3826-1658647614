@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Result</title>
+</head>
+<body class="bg-slate-200 flex justify-center items-center">
+    <div class="bg-white border-4 border-stone-500 rounded-3xl flex-row p-8 mt-2 w-3/4 justify-center items-center">
+        
+        <br><br>
+        {% if result == 1 %}
+            <h1 class="text-4xl text-center font-semibold mb-6">You are not healthy!!</h1>
+            <img class="w-3/4 ml-6" src="{{url_for('static',filename='images/damage.jpg')}}" alt="damage">
+        {% else %}
+            <h1 class="text-4xl text-center font-semibold mb-6">You are healthy!!</h1>
+            <img class="w-3/4 ml-6" src="{{url_for('static',filename='images/healthy.jpg')}}" alt="healthy">
+        {% endif %}
+        <br><br>
+        <button class="bg-slate-400 px-8 py-3 rounded-3xl border-2 border-slate-500 ml-96"><a href="/">Back to Home</a></button>    
+    </div>
+
+   
+</body>
+</html>
