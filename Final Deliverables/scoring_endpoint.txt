@@ -1,0 +1,7 @@
+scoring endpoint 
+
+https://us-south.ml.cloud.ibm.com/ml/v4/deployments/7623d868-2b10-4b95-9354-0d13c356f5ab/predictions?version=2022-11-17
+
+API Key 
+
+hdsXmmNhU2-d2w8TwwX-bnexosADc1_iUaR-04mPZU-q
